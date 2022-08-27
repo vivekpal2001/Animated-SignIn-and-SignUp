@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1279277e8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./login.css" />
+    <title>Sign In - Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <div class="signin-signup">
+          <form action="#" name="Signin" class="signin-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-feild">
+              <i class="fas fa-user"></i>
+              <input type="text" required placeholder="Username" />
+            </div>
+            <div class="input-feild">
+              <i class="fas fa-lock"></i>
+              <input type="password" required placeholder="Password" />
+            </div>
+            <input
+              type="submit"
+              value="Log in"
+              id="signinbtn"
+              class="btn solid"
+            />
+
+            <p class="social-text">Or Sign in with Social Platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </form>
+
+          <form
+            action="./signup_success.html"
+            name="Signup"
+            class="signup-form"
+            onsubmit="return validate()"
+            method="POST"
+          >
+            <h2 class="title">Sign up</h2>
+            <div class="input-feild" id="nameErrorBorder">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" required placeholder="Username" />
+              <span class="user-errorHandle"
+                >* Length must be more than 5 letter !</span
+              >
+            </div>
+            <div class="input-feild">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" required placeholder="Email" />
+              <span class="email-errorHandle"></span>
+            </div>
+            <div class="input-feild" id="passErrorBorder">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                required
+                placeholder="Password"
+              />
+              <span class="password-errorHandle"
+                >* Password must be minimum of 8 letter !</span
+              >
+            </div>
+            <div class="input-feild" id="confirmPassErrorBorder">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                name="confirmPass"
+                required
+                placeholder="Confirm Password"
+              />
+              <span class="confirm-errorHandle"
+                >* Password doesnot match !</span
+              >
+            </div>
+            <input
+              type="submit"
+              value="Sign up"
+              id="signupbtn"
+              class="btn solid"
+            />
+
+            <!-- <p class="social-text">Or Sign up with Social Platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div> -->
+          </form>
+        </div>
+      </div>
+      <div class="panel-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here?</h3>
+            <p>
+              Come and deep dive in our top class MCQ bhandar to enhance your
+              knowledge
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+          <img src="./loginSVG.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              See your progress by signing in to your account and explore more
+              topics to practice.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+          <img src="./signUPsvg.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+    <script src="../backend-sign/server.js"></script>
+  </body>
+</html>
